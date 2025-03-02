@@ -1,0 +1,10 @@
+{
+  "name": "chillzone-portfolio",
+  "version": "1.0.0",
+  "description": "ChillZone Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

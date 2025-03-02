@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChillZone - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">ChillZone</a>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About Me</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>CHILLZONE</h1>
+        <p class="subtitle">Linux Enthusiast & Self-Hosting Wizard</p>
+        <div class="cta-buttons">
+            <a href="#projects" class="btn primary">Explore Projects</a>
+            <a href="#contact" class="btn secondary">👋 Let's Connect</a>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <p class="section-desc">Check out some of my recent GitHub projects</p>
+        
+        <div id="github-projects" class="projects-grid">
+            <!-- Projects will be loaded dynamically -->
+            <div class="project-card skeleton">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-desc"></div>
+                <div class="skeleton-tags"></div>
+            </div>
+            <div class="project-card skeleton">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-desc"></div>
+                <div class="skeleton-tags"></div>
+            </div>
+            <div class="project-card skeleton">
+                <div class="skeleton-title"></div>
+                <div class="skeleton-desc"></div>
+                <div class="skeleton-tags"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <div class="bio">
+                    <p>
+                        I'm Jannik, an <strong>18 year old</strong> from Germany! 📚<br />
+                        Meow meow mrrp~ HRT since a year ago, taken by Lea 💯<br /><br />
+                        I go by <em>Mika</em> on the internet, and my socials are linked on
+                        this site. I mainly spend my time shitposting, so if you're into
+                        that feel free to follow me :3<br />
+                        I'm learning PCB design, PnP production, and CNC machining. My
+                        apprenticeship is in plastic and rubber technology.<br /><br />
+                        I'm a software developer with big ambitions and a chronic lack of
+                        motivation to touch my projects. Linux enthusiast, self-hosting
+                        everything, open-source enjoyer. Big tech can go to hell.<br />
+                        I run <em>amogus.cloud</em>, an invite-only suite of self-hosted
+                        software for my friends including Nextcloud, Email, Jellyfin, and
+                        others :3
+                    </p>
+                </div>
+            </div>
+            <div class="github-stats">
+                <div class="stats-container">
+                    <img src="https://github-readme-stats.vercel.app/api?username=einspommes&show_icons=true&theme=midnight-purple&hide_border=true&bg_color=1e293b&icon_color=8B5CF6&text_color=94A3B8&title_color=8B5CF6" alt="GitHub Stats" />
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=einspommes&theme=midnight-purple&hide_border=true&background=1e293b&ring=8B5CF6&fire=8B5CF6&currStreakLabel=8B5CF6" alt="GitHub Streak" />
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=einspommes&layout=compact&theme=midnight-purple&hide_border=true&bg_color=1e293b&title_color=8B5CF6&text_color=94A3B8" alt="Top Languages" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p class="section-desc">Get in touch for collaborations or just to say hi!</p>
+        
+        <div class="contact-container">
+            <form id="contact-form" action="send-mail.php" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                ChillZone 2025. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 1000
+                    }
+                },
+                "color": {
+                    "value": "#8B5CF6"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": true,
+                        "speed": 2,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#6D28D9",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": true,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "bubble": {
+                        "distance": 200,
+                        "size": 6,
+                        "duration": 2,
+                        "opacity": 0.8,
+                        "speed": 3
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
