@@ -90,6 +90,64 @@ async function fetchGitHubProjects() {
     }
 }
 
+// Theme Switcher
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeMenu = document.getElementById('theme-menu');
+    const themeOptions = document.querySelectorAll('.theme-option');
+    const root = document.documentElement;
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('selectedTheme') || 'purple-night';
+    applyTheme(savedTheme);
+
+    // Toggle theme menu
+    themeToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themeMenu.classList.toggle('active');
+    });
+
+    // Close theme menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!themeToggle.contains(e.target) && !themeMenu.contains(e.target)) {
+            themeMenu.classList.remove('active');
+        }
+    });
+
+    // Theme selection
+    themeOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const themeName = option.dataset.theme;
+            applyTheme(themeName);
+            themeMenu.classList.remove('active');
+            
+            // Visual feedback
+            themeOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+        });
+    });
+
+    function applyTheme(themeName) {
+        const theme = themes[themeName];
+        if (!theme) return;
+
+        // Save theme preference
+        localStorage.setItem('selectedTheme', themeName);
+
+        // Apply CSS variables
+        Object.entries(theme.colors).forEach(([key, value]) => {
+            const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+            root.style.setProperty(`--${cssKey}`, value);
+        });
+
+        // Update active state in menu
+        themeOptions.forEach(option => {
+            option.classList.toggle('active', option.dataset.theme === themeName);
+        });
+    }
+});
+
 // Form submission handling
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {

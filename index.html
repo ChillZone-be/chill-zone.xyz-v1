@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <nav>
+    <nav class="nav">
         <div class="nav-content">
             <a href="#" class="logo">ChillZone</a>
             <div class="nav-links">
@@ -17,6 +17,29 @@
                 <a href="#about">About Me</a>
                 <a href="#timeline">Timeline</a>
                 <a href="#contact">Contact</a>
+                <div class="theme-switcher">
+                    <button id="theme-toggle" aria-label="Toggle theme menu">
+                        <i class="fas fa-palette"></i>
+                    </button>
+                    <div class="theme-menu" id="theme-menu">
+                        <div class="theme-option" data-theme="purple-night">
+                            <div class="color-preview"></div>
+                            <span>Purple Night</span>
+                        </div>
+                        <div class="theme-option" data-theme="sakura">
+                            <div class="color-preview"></div>
+                            <span>Sakura Dreams</span>
+                        </div>
+                        <div class="theme-option" data-theme="cyber-neon">
+                            <div class="color-preview"></div>
+                            <span>Cyber Neon</span>
+                        </div>
+                        <div class="theme-option" data-theme="ocean-wave">
+                            <div class="color-preview"></div>
+                            <span>Ocean Wave</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -120,6 +143,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="themes.js"></script>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
