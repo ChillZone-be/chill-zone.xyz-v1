@@ -9,37 +9,42 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <nav class="nav">
-        <div class="nav-content">
-            <a href="#" class="logo">ChillZone</a>
-            <div class="nav-links">
-                <a href="#projects">Projects</a>
-                <a href="#about">About Me</a>
-                <a href="#timeline">Timeline</a>
-                <a href="#contact">Contact</a>
-                <div class="theme-switcher">
-                    <button id="theme-toggle" aria-label="Toggle theme menu">
-                        <i class="fas fa-palette"></i>
-                    </button>
-                    <div class="theme-menu" id="theme-menu">
-                        <div class="theme-option" data-theme="purple-night">
-                            <div class="color-preview"></div>
-                            <span>Purple Night</span>
-                        </div>
-                        <div class="theme-option" data-theme="sakura">
-                            <div class="color-preview"></div>
-                            <span>Sakura Dreams</span>
-                        </div>
-                        <div class="theme-option" data-theme="cyber-neon">
-                            <div class="color-preview"></div>
-                            <span>Cyber Neon</span>
-                        </div>
-                        <div class="theme-option" data-theme="ocean-wave">
-                            <div class="color-preview"></div>
-                            <span>Ocean Wave</span>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Chill</span>
+                <span class="logo-highlight">Zone</span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user-astronaut"></i>
+                    <span>About</span>
+                </a>
+                <a href="#timeline" class="nav-link">
+                    <i class="fas fa-stream"></i>
+                    <span>Timeline</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+
+            <div class="nav-music-player">
+                <iframe id="youtube-player" 
+                        src="https://www.youtube.com/embed/KA_idcpXVvM?enablejsapi=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=KA_idcpXVvM" 
+                        allow="autoplay"
+                        style="display: none;">
+                </iframe>
+                <button class="play-pause">
+                    <i class="fas fa-play"></i>
+                </button>
+                <span class="track-title">Resonance</span>
             </div>
         </div>
     </nav>
@@ -128,34 +133,6 @@
             </form>
         </div>
     </section>
-
-    <div id="music-player" class="music-player">
-        <iframe id="youtube-player" 
-                src="https://www.youtube.com/embed/KA_idcpXVvM?enablejsapi=1&controls=0&showinfo=0&modestbranding=1&loop=1&playlist=KA_idcpXVvM" 
-                allow="autoplay"
-                style="width:0; height:0; border:0;">
-        </iframe>
-        <div class="player-content">
-            <div class="track-info">
-                <div class="track-title">Resonance</div>
-                <div class="track-artist">HOME</div>
-            </div>
-            <div class="player-controls">
-                <button class="play-pause" aria-label="Play/Pause">
-                    <i class="fas fa-play"></i>
-                </button>
-                <input type="range" class="volume-slider" min="0" max="100" value="50" 
-                       aria-label="Volume Control">
-            </div>
-            <div class="visualizer">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
