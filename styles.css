@@ -397,6 +397,41 @@ textarea {
     resize: vertical;
 }
 
+.github-input {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto;
+    max-width: 400px;
+}
+
+.github-input input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.github-input input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.github-input .btn {
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.github-input .btn:hover {
+    background: var(--accent-hover);
+}
+
 footer {
     background: var(--nav-bg);
     backdrop-filter: blur(10px);
@@ -1366,5 +1401,153 @@ html {
 
     .nav-music-player .track-title {
         display: none;
+    }
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-secondary);
+}
+
+.timeline::-webkit-scrollbar {
+    height: 6px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 3px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--border-color);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    min-width: 250px;
+    max-width: 250px;
+    margin-top: 2rem;
+}
+
+.timeline-item:nth-child(even) {
+    margin-top: 4rem;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.75rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+    color: var(--accent);
+}
+
+.timeline-description {
+    font-size: 0.85rem;
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-info {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    flex-wrap: wrap;
+}
+
+.project-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.timeline-links {
+    margin-top: 0.5rem;
+}
+
+.timeline-links a {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.timeline-links a:hover {
+    color: var(--accent-hover);
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-bottom: 1rem;
+    }
+    
+    .timeline-item {
+        min-width: 200px;
+        max-width: 200px;
     }
 }
